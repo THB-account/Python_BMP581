@@ -13,33 +13,33 @@ MicroPython Driver for the Bosch BMP581 pressure sensor
 
 """
 
-from micropython import const
+#from micropython import const
 from micropython_bmp581.i2c_helpers import CBits, RegisterStruct
 
 
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/jposada202020/MicroPython_BMP581.git"
 
-_REG_WHOAMI = const(0x01)
-_OSR_CONF = const(0x36)
-_ODR_CONFIG = const(0x37)
+_REG_WHOAMI = 0x01
+_OSR_CONF = 0x36
+_ODR_CONFIG = 0x37
 
 # Power Modes
-STANDBY = const(0x00)
-NORMAL = const(0x01)
-FORCED = const(0x02)
-NON_STOP = const(0x03)
+STANDBY = 0x00
+NORMAL = 0x01
+FORCED = 0x02
+NON_STOP = 0x03
 power_mode_values = (STANDBY, NORMAL, FORCED, NON_STOP)
 
 # Oversample Rate
-OSR1 = const(0x00)
-OSR2 = const(0x01)
-OSR4 = const(0x02)
-OSR8 = const(0x03)
-OSR16 = const(0x04)
-OSR32 = const(0x05)
-OSR64 = const(0x06)
-OSR128 = const(0x07)
+OSR1 = 0x00
+OSR2 = 0x01
+OSR4 = 0x02
+OSR8 = 0x03
+OSR16 = 0x04
+OSR32 = 0x05
+OSR64 = 0x06
+OSR128 = 0x07
 pressure_oversample_rate_values = (OSR1, OSR2, OSR4, OSR8, OSR16, OSR32, OSR64, OSR128)
 temperature_oversample_rate_values = (
     OSR1,
