@@ -4,7 +4,7 @@
 
 import time
 #from machine import Pin, I2C
-from micropython_bmp581 import bmp581
+from bmp581 import bmp581
 from smbus_adaption import ByteSMBus
 
 i2c = ByteSMBus(1) # Correct I2C pins for RP2040
