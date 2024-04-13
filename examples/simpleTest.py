@@ -3,9 +3,9 @@
 # SPDX-License-Identifier: MIT
 
 import time
-from machine import Pin, I2C
+#from machine import Pin, I2C
 from micropython_bmp581 import bmp581
-from SMBUS_Adaption import ByteSMBus
+from smbus_adaption import ByteSMBus
 
 i2c = ByteSMBus(1) # Correct I2C pins for RP2040
 bmp = bmp581.BMP581(i2c)
